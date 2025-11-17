@@ -10,7 +10,7 @@ export const Location = () => {
             Visit Us
           </h2>
           <p className="text-lg text-muted-foreground">
-            Perfect spot to grab a drink before catching your train
+            Perfect spot to take a break from shopping
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export const Location = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Location</h3>
                     <p className="text-muted-foreground">
-                      17 St. Dunstans St, Canterbury CT2 8AF
+                      41 St Peter's St, Canterbury CT1 2BG
                     </p>
                   </div>
                 </div>
@@ -37,8 +37,7 @@ export const Location = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Getting Here</h3>
                     <p className="text-muted-foreground">
-                      Just 2 minutes walk from<br />
-                      Canterbury West Station
+                      Right in the heart of Canterbury highstreet!
                     </p>
                   </div>
                 </div>
@@ -50,8 +49,8 @@ export const Location = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Hours</h3>
                     <p className="text-muted-foreground">
-                      Monday - Saturday: 7:00 AM - 5:00 PM<br />
-                      Sunday: 8:00 AM - 4:00 PM
+                      Monday - Saturday: 8:00 AM - 6:00 PM<br />
+                      Sunday: 9:00 AM - 5:30 PM
                     </p>
                   </div>
                 </div>
@@ -69,7 +68,7 @@ export const Location = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                     <p className="text-muted-foreground">
-                      +44 1227 123456
+                      01227456791
                     </p>
                   </div>
                 </div>
@@ -81,7 +80,7 @@ export const Location = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      hello@lecafe-canterbury.co.uk
+                      hello@CafeStPierre-canterbury.co.uk
                     </p>
                   </div>
                 </div>
