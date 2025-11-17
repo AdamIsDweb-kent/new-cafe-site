@@ -6,12 +6,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <Coffee className="w-10 h-10 mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Le Cafe</h3>
+          <h3 className="text-2xl font-bold mb-2">Cafe St Pierre</h3>
           <p className="text-cream/80 mb-6">
-            Your neighborhood haven for specialty coffee & treats
+            Your Highstreet haven for French pastries & delicious coffee
           </p>
           <p className="text-cream/60 text-sm">
-            © 2024 Le Cafe Canterbury. All rights reserved.
+            © ---- Cafe St Pierre Canterbury. All rights reserved.
           </p>
         </div>
       </div>
