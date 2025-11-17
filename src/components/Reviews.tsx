@@ -4,16 +4,16 @@ import { Star } from "lucide-react";
 export const Reviews = () => {
   const reviews = [
     {
-      text: "Lovely coffee shop, perfect spot to stop off before you get your train or when you get into Canterbury. The coffee was amazing and I was so impressed with their sandwich options!!! They gave my little sister a free babyccino which was so nice. Very clean and lovely staff.",
-      author: "Julia Weiss"
+      text: "Great little gem. Really cozy inside. I've lived in Paris and the quality of the pastries are as good as in France. Flaky and soft croissants, excellent quiches and great coffee. A must stop for a great breakfast or  brunch if you are hanging around Canterbury.",
+      author: "Juan Solano"
     },
     {
-      text: "Beautiful cafe, lovely vibe, barista welcomes you with lovely energy and she recommended me a pistachio latte! It was so good - must try!",
-      author: "Naveen HB"
+      text: "Dog friendly! Made us and our dog very welcome. Cute patio. Excellent staff. Delicious pastries and baguettes. French touches everywhere, down to the soap :) Thank you!",
+      author: "Sophie"
     },
     {
-      text: "Lovely cafe that’s only round the corner from Canterbury West Train Station. Perfect to grab a drink or a bite from just before catching the train. I initially ordered an iced vanilla matcha but the barista recommended the iced blueberry matcha as she said it tastes like a blueberry muffin- and she was right! It was a delicious drink and I’m glad I opted for it instead of my usual order. It was so good that I forgot to take a picture of it! I didn’t get any food but there’s a nice selection of reasonably priced pastries and toasties to order as well.",
-      author: "N M"
+      text: "A lovely little oasis in St Peter's Street. It is very pleasant to sit in the garden away from the hustle & bustle of the city. There is a varied menu including filled baguettes, croissants and delicious pastries. The croque monsieur & the petit dejeuner are  favourites with us. The staff are always friendly and efficient.",
+      author: "Adrienne Smith"
     }
   ];
 
