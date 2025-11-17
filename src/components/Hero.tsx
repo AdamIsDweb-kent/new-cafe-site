@@ -20,13 +20,13 @@ export const Hero = () => {
         <div className="animate-fade-in">
           <Coffee className="w-16 h-16 mx-auto mb-6 text-cream" />
           <h1 className="text-5xl md:text-7xl font-bold text-cream mb-6 tracking-tight">
-            Le Cafe
+            Cafe St Pierre
           </h1>
           <p className="text-xl md:text-2xl text-cream/90 mb-8 max-w-2xl mx-auto">
-            Your neighborhood haven for specialty coffee & artisanal treats
+            Highstreet haven for French pastries & delicious coffee
           </p>
           <p className="text-lg text-cream/80 mb-10 max-w-xl mx-auto">
-            Just 2 minutes from Canterbury West Station
+            Right in the heart of Canterbury highstreet!
           </p>
           <Button 
             onClick={scrollToMenu}
