@@ -1,29 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
-import blueberryMatcha from "@/assets/blueberry-matcha.jpg";
-import pistachioLatte from "@/assets/pistachio-latte.jpg";
+import hotChocolate from "@/assets/hot-chocolate.png";
+import lunchOption from "@/assets/lunch-option.jpg";
 import pastries from "@/assets/pastries.jpg";
 
 export const Menu = () => {
   const featuredDrinks = [
-    {
-      name: "Blueberry Matcha",
-      description: "Tastes like a blueberry muffin! Our signature iced matcha with fresh blueberries",
-      image: blueberryMatcha,
-      tag: "Customer Favorite"
-    },
-    {
-      name: "Pistachio Latte",
-      description: "Creamy, nutty perfection - a must-try according to our regulars",
-      image: pistachioLatte,
-      tag: "Must Try"
-    },
-    {
-      name: "Fresh Pastries",
-      description: "Freshly baked daily - from flaky croissants to sweet treats",
-      image: pastries,
-      tag: "Baked Fresh"
-    }
-  ];
+  {
+    name: "Hot Chocolate",
+    description: "Rich, smooth, and topped with a swirl of cream — our comforting hot chocolate is perfect for chilly mornings or a sweet afternoon treat.",
+    image: hotChocolate,
+    tag: "Customer Favorite"
+  },
+  {
+    name: "Ham & Cheese Toastie",
+    description: "Golden, crunchy, and filled with warm melted cheese — a simple, satisfying lunch made fresh to order.",
+    image: lunchOption,
+    tag: "Most Popular"
+  },
+  {
+    name: "Fresh Pastries",
+    description: "A selection of buttery croissants, sweet pastries, and handmade treats baked fresh each morning.",
+    image: pastries,
+    tag: "Baked Fresh"
+  }
+ ];
+
 
   return (
     <section id="menu" className="py-20 bg-muted/30">
