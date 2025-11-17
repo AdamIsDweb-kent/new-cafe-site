@@ -6,12 +6,20 @@ export const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Welcome to Le Cafe
+            Welcome to Cafe St Pierre
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We're more than just a cafe - we're your local gathering spot where every cup is crafted with care 
-            and every visit feels like coming home. Our passionate baristas are always ready with a smile 
-            and the perfect recommendation.
+            A cosy, French-inspired café nestled in the heart of Canterbury, 
+            known for its warm atmosphere, artisan pastries, and laid-back charm. 
+            Our team takes pride in crafting authentic croissants, quiches, and 
+            fresh baguettes using traditional methods that bring a touch of Paris 
+            to the city.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+            Whether you're joining us for breakfast, a relaxed weekend brunch, or 
+            a quick coffee break, you'll find a comfortable space both inside and 
+            out — including a welcoming, dog-friendly patio. Great food, great 
+            coffee, and a friendly environment for locals and visitors alike.
           </p>
         </div>
 
@@ -20,9 +28,11 @@ export const About = () => {
             <div className="w-16 h-16 bg-matcha-light rounded-full flex items-center justify-center mx-auto mb-4">
               <Heart className="w-8 h-8 text-matcha" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Made with Love</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              Authentic Flavour
+            </h3>
             <p className="text-muted-foreground">
-              Every drink is handcrafted with premium ingredients and genuine care
+              Classic French pastries and savoury dishes prepared with traditional techniques.
             </p>
           </div>
 
@@ -30,9 +40,11 @@ export const About = () => {
             <div className="w-16 h-16 bg-matcha-light rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="w-8 h-8 text-matcha" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Community First</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              Warm & Welcoming
+            </h3>
             <p className="text-muted-foreground">
-              A welcoming space where neighbors become friends over great coffee
+              A comfortable space for breakfast, brunch, or a peaceful coffee break — dogs included.
             </p>
           </div>
 
@@ -40,9 +52,11 @@ export const About = () => {
             <div className="w-16 h-16 bg-matcha-light rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="w-8 h-8 text-matcha" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">Quality Focused</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              Crafted With Care
+            </h3>
             <p className="text-muted-foreground">
-              From specialty matcha to fresh pastries, we never compromise on quality
+              High-quality ingredients and a dedicated team focused on delivering memorable food and coffee.
             </p>
           </div>
         </div>
