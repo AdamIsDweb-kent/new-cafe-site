@@ -12,8 +12,8 @@ export const Menu = () => {
     tag: "Customer Favorite"
   },
   {
-    name: "Ham & Cheese Toastie",
-    description: "Golden, crunchy, and filled with warm melted cheese — a simple, satisfying lunch made fresh to order.",
+    name: "Lunch Options",
+    description: "Freshly prepared lunch options made with quality ingredients — perfect for a quick bite or a relaxed midday break.",
     image: lunchOption,
     tag: "Most Popular"
   },
