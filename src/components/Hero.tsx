@@ -1,7 +1,6 @@
 import React from "react";
 import heroImg from "@/assets/cafe-st-pierre-hero.jpg";
 
-
 export const Hero: React.FC = () => {
   return (
     <section className="relative isolate min-h-[70vh] bg-slate-900 text-white">
