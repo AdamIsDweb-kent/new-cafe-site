@@ -1,4 +1,5 @@
 import React from "react";
+import streetImg from "@/assets/cafe-street.jpg";
 
 export const Location: React.FC = () => {
   return (

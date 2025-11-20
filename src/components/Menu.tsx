@@ -10,30 +10,31 @@ const items = [
     tag: "Breakfast favourite",
     description:
       "Buttery croissant served warm with a classic French café crème.",
-    image: "/assets/cafe-croissant.jpg",
+    image: hotChocolateImg, // or a croissant photo if you take one later
   },
   {
     name: "Croque Monsieur",
     tag: "Most popular",
     description:
       "Toasted French sandwich with ham, Emmental and béchamel, served with salad.",
-    image: "/assets/croque-monsieur.jpg",
+    image: croqueImg,
   },
   {
     name: "Quiche du Jour",
     tag: "From the kitchen",
     description:
       "House-baked quiche using seasonal ingredients, served with mixed leaves.",
-    image: "/assets/quiche.jpg",
+    image: quicheImg,
   },
   {
     name: "Pâtisserie Selection",
     tag: "Sweet treat",
     description:
       "A changing selection of French pastries, cakes and tarts from the counter.",
-    image: "/assets/patisserie.jpg",
+    image: patisserieImg,
   },
 ];
+
 
 export const Menu: React.FC = () => {
   return (
