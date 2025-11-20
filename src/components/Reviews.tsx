@@ -1,60 +1,78 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import React from "react";
 
-export const Reviews = () => {
-  const reviews = [
-    {
-      text: "Great little gem. Really cozy inside. I've lived in Paris and the quality of the pastries are as good as in France. Flaky and soft croissants, excellent quiches and great coffee. A must stop for a great breakfast or  brunch if you are hanging around Canterbury.",
-      author: "Juan Solano"
-    },
-    {
-      text: "Dog friendly! Made us and our dog very welcome. Cute patio. Excellent staff. Delicious pastries and baguettes. French touches everywhere, down to the soap :) Thank you!",
-      author: "Sophie"
-    },
-    {
-      text: "A lovely little oasis in St Peter's Street. It is very pleasant to sit in the garden away from the hustle & bustle of the city. There is a varied menu including filled baguettes, croissants and delicious pastries. The croque monsieur & the petit dejeuner are  favourites with us. The staff are always friendly and efficient.",
-      author: "Adrienne Smith"
-    }
-  ];
+const reviews = [
+  {
+    name: "Juan Solano",
+    text: `Great little gem. Really cosy inside. I've lived in Paris and the pastries here are as good as in France. Flaky croissants, excellent quiches and great coffee – a must stop if you're in Canterbury.`,
+  },
+  {
+    name: "Sophie",
+    text: `Dog friendly! Made us and our dog very welcome. Cute patio, excellent staff and delicious pastries and baguettes. French touches everywhere.`,
+  },
+  {
+    name: "Adrienne Smith",
+    text: `A lovely little oasis in St Peter's Street. The croque monsieur and petit déjeuner are favourites for us. Friendly staff and relaxed vibe.`,
+  },
+];
 
+export const Reviews: React.FC = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            What Our Customers Say
-          </h2>
-          <div className="flex items-center justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-matcha text-matcha" />
-            ))}
-          </div>
-          <p className="text-lg text-muted-foreground">
-            Loved by locals and visitors alike
+    <section className="bg-background py-16 sm:py-20" id="reviews">
+      <div className="mx-auto max-w-6xl px-4">
+        <header className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+            Kind words
           </p>
-        </div>
+          <h2 className="mt-3 text-3xl font-semibold text-primary sm:text-4xl">
+            What our guests say
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground sm:text-base">
+            Loved by locals, visitors and French expats alike.
+          </p>
+        </header>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {reviews.map((review, index) => (
-            <Card 
-              key={index}
-              className="bg-card shadow-soft hover:shadow-medium transition-all duration-300 border-0"
-            >
-              <CardContent className="p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-matcha text-matcha" />
+        {/* featured + two smaller */}
+        <div className="mt-8 grid gap-6 md:grid-cols-[1.2fr,1fr] md:items-start">
+          {/* Featured review */}
+          <article className="rounded-2xl bg-card p-6 shadow-md">
+            <div className="flex items-center gap-2 text-emerald-600">
+              {"★★★★★".split("").map((star, i) => (
+                <span key={i} aria-hidden>
+                  ★
+                </span>
+              ))}
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              “{reviews[0].text}”
+            </p>
+            <p className="mt-4 text-sm font-semibold text-primary">
+              — {reviews[0].name}
+            </p>
+          </article>
+
+          {/* smaller column */}
+          <div className="space-y-4">
+            {reviews.slice(1).map((r) => (
+              <article
+                key={r.name}
+                className="rounded-2xl bg-card p-4 shadow-sm"
+              >
+                <div className="flex items-center gap-1 text-xs text-emerald-600">
+                  {"★★★★★".split("").map((star, i) => (
+                    <span key={i} aria-hidden>
+                      ★
+                    </span>
                   ))}
                 </div>
-                <p className="text-foreground leading-relaxed mb-4 italic">
-                  "{review.text}"
+                <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                  “{r.text}”
                 </p>
-                <p className="text-muted-foreground font-medium">
-                  — {review.author}
+                <p className="mt-3 text-xs font-semibold text-primary">
+                  — {r.name}
                 </p>
-              </CardContent>
-            </Card>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
