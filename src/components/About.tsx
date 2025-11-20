@@ -1,66 +1,70 @@
-import { Heart, Users, Award } from "lucide-react";
+import React from "react";
 
-export const About = () => {
+export const About: React.FC = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Welcome to Cafe St Pierre
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            A cosy, French-inspired café nestled in the heart of Canterbury, 
-            known for its warm atmosphere, artisan pastries, and laid-back charm. 
-            Our team takes pride in crafting authentic croissants, quiches, and 
-            fresh baguettes using traditional methods that bring a touch of Paris 
-            to the city.
+    <section className="bg-background py-16 sm:py-20" id="about">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-[1.4fr,1fr] md:items-start">
+        {/* LEFT: story */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+            Notre histoire
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-            Whether you're joining us for breakfast, a relaxed weekend brunch, or 
-            a quick coffee break, you'll find a comfortable space both inside and 
-            out — including a welcoming, dog-friendly patio. Great food, great 
-            coffee, and a friendly environment for locals and visitors alike.
+
+          <h2 className="mt-3 text-3xl font-semibold text-primary sm:text-4xl">
+            Welcome to Cafe St&nbsp;Pierre
+          </h2>
+
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            A cosy, French-inspired café nestled on St Peter&apos;s Street, known for
+            its warm atmosphere, artisan pastries and laid-back charm. Our team
+            takes pride in crafting croissants, quiches and baguettes using
+            traditional methods that bring a touch of France to Canterbury.
+          </p>
+
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Whether you join us for breakfast, a relaxed weekend brunch or a
+            quick coffee break, you&apos;ll find a comfortable space inside and out –
+            including a welcoming, dog-friendly patio – and a friendly team ready
+            with a smile.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="text-center p-6 rounded-2xl bg-card shadow-soft hover:shadow-medium transition-all duration-300">
-            <div className="w-16 h-16 bg-matcha-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Heart className="w-8 h-8 text-matcha" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              Authentic Flavour
-            </h3>
-            <p className="text-muted-foreground">
-              Classic French pastries and savoury dishes prepared with traditional techniques.
-            </p>
-          </div>
-
-          <div className="text-center p-6 rounded-2xl bg-card shadow-soft hover:shadow-medium transition-all duration-300">
-            <div className="w-16 h-16 bg-matcha-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-matcha" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              Warm & Welcoming
-            </h3>
-            <p className="text-muted-foreground">
-              A comfortable space for breakfast, brunch, or a peaceful coffee break — dogs included.
-            </p>
-          </div>
-
-          <div className="text-center p-6 rounded-2xl bg-card shadow-soft hover:shadow-medium transition-all duration-300">
-            <div className="w-16 h-16 bg-matcha-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-matcha" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              Crafted With Care
-            </h3>
-            <p className="text-muted-foreground">
-              High-quality ingredients and a dedicated team focused on delivering memorable food and coffee.
-            </p>
-          </div>
+        {/* RIGHT: stacked highlight cards */}
+        <div className="space-y-4">
+          {[
+            {
+              title: "Authentic flavour",
+              text: "Classic French pastries and savoury dishes prepared with time-honoured techniques.",
+            },
+            {
+              title: "Warm & welcoming",
+              text: "A relaxed space for breakfast, lunch or coffee – with room for friends, family and dogs.",
+            },
+            {
+              title: "Crafted with care",
+              text: "High-quality ingredients and a small, dedicated team focused on memorable food and coffee.",
+            },
+          ].map((item) => (
+            <article
+              key={item.title}
+              className="flex gap-3 rounded-2xl bg-card p-4 shadow-sm"
+            >
+              <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-full bg-matcha-light flex items-center justify-center text-sm font-semibold text-matcha">
+                •
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-primary sm:text-base">
+                  {item.title}
+                </h3>
+                <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
+                  {item.text}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
   );
 };
+
