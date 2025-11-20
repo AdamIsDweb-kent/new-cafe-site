@@ -22,7 +22,7 @@ export const Location: React.FC = () => {
           {/* street image / map */}
           <div className="overflow-hidden rounded-3xl bg-card shadow-md">
             <img
-              src="/assets/cafe-street.jpg"
+              src={streetImg}
               alt="Street view of Cafe St Pierre on St Peter's Street"
               className="h-full w-full object-cover"
             />
