@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/assets/cafe-st-pierre-hero.jpg"
+          src={heroImg}
           alt="Cafe St Pierre exterior on St Peter's Street"
           className="h-full w-full object-cover"
         />
