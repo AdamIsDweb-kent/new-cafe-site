@@ -1,6 +1,6 @@
 import React from "react";
 import croqueImg from "@/assets/croque-monsieur.jpg";
-import hotChocolateImg from "@/assets/hot-chocolate.jpg";
+import hotChocolateImg from "@/assets/hot-chocolate.png";
 import patisserieImg from "@/assets/patisserie.jpg";
 import quicheImg from "@/assets/quiche.jpg";
 
