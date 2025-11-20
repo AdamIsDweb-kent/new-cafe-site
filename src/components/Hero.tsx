@@ -1,46 +1,54 @@
-import { Button } from "@/components/ui/button";
-import { Coffee } from "lucide-react";
-import heroImage from "@/assets/hero-cafe.jpg";
+import React from "react";
 
-export const Hero = () => {
-  const scrollToMenu = () => {
-    document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" });
-  };
-
+export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-coffee-dark/80 via-coffee-medium/70 to-coffee-dark/80" />
+    <section className="relative isolate min-h-[70vh] bg-slate-900 text-white">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/assets/cafe-st-pierre-hero.jpg"
+          alt="Cafe St Pierre exterior on St Peter's Street"
+          className="h-full w-full object-cover"
+        />
+        {/* navy gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/40" />
       </div>
-      
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="animate-fade-in">
-          <Coffee className="w-16 h-16 mx-auto mb-6 text-cream" />
-          <h1 className="text-5xl md:text-7xl font-bold text-cream mb-6 tracking-tight">
-            Cafe St Pierre
+
+      {/* Content */}
+      <div className="relative mx-auto flex min-h-[70vh] max-w-5xl items-center px-4 py-16">
+        <div className="max-w-xl space-y-5 text-left">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-200/80">
+            Café &amp; Bistro Français
+          </p>
+
+          <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+            Cafe St&nbsp;Pierre
           </h1>
-          <p className="text-xl md:text-2xl text-cream/90 mb-8 max-w-2xl mx-auto">
-            Highstreet haven for French pastries & delicious coffee
+
+          <p className="text-base text-slate-100/90 sm:text-lg">
+            Highstreet haven for French pastries, rustic café dishes and
+            delicious coffee – right in the heart of Canterbury.
           </p>
-          <p className="text-lg text-cream/80 mb-10 max-w-xl mx-auto">
-            Right in the heart of Canterbury highstreet!
+
+          <p className="text-sm text-slate-200/80">
+            41 St Peter&apos;s St, just off the high street – perfect for breakfast,
+            lunch or an evening treat.
           </p>
-          <Button 
-            onClick={scrollToMenu}
-            size="lg"
-            className="bg-matcha hover:bg-matcha/90 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            Explore Our Menu
-          </Button>
-        </div>
-      </div>
-      
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-cream/40 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-cream/60 rounded-full" />
+
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a
+              href="#menu"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+            >
+              Explore Our Menu
+            </a>
+            <a
+              href="#visit"
+              className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2.5 text-sm font-medium text-white/90 backdrop-blur-sm transition hover:bg-white/10"
+            >
+              Find Us in Canterbury
+            </a>
+          </div>
         </div>
       </div>
     </section>
