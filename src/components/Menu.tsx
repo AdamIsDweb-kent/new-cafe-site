@@ -1,71 +1,86 @@
-import { Card, CardContent } from "@/components/ui/card";
-import hotChocolate from "@/assets/hot-chocolate.png";
-import lunchOption from "@/assets/lunch-option.jpg";
-import pastries from "@/assets/pastries.jpg";
+import React from "react";
 
-export const Menu = () => {
-  const featuredDrinks = [
+const items = [
   {
-    name: "Hot Chocolate",
-    description: "Rich, smooth, and topped with a swirl of cream — our comforting hot chocolate is perfect for chilly mornings or a sweet afternoon treat.",
-    image: hotChocolate,
-    tag: "Customer Favorite"
+    name: "Café Crème & Croissant",
+    tag: "Breakfast favourite",
+    description:
+      "Buttery croissant served warm with a classic French café crème.",
+    image: "/assets/cafe-croissant.jpg",
   },
   {
-    name: "Lunch Options",
-    description: "Freshly prepared lunch options made with quality ingredients — perfect for a quick bite or a relaxed midday break.",
-    image: lunchOption,
-    tag: "Most Popular"
+    name: "Croque Monsieur",
+    tag: "Most popular",
+    description:
+      "Toasted French sandwich with ham, Emmental and béchamel, served with salad.",
+    image: "/assets/croque-monsieur.jpg",
   },
   {
-    name: "Fresh Pastries",
-    description: "A selection of buttery croissants, sweet pastries, and handmade treats baked fresh each morning.",
-    image: pastries,
-    tag: "Baked Fresh"
-  }
- ];
+    name: "Quiche du Jour",
+    tag: "From the kitchen",
+    description:
+      "House-baked quiche using seasonal ingredients, served with mixed leaves.",
+    image: "/assets/quiche.jpg",
+  },
+  {
+    name: "Pâtisserie Selection",
+    tag: "Sweet treat",
+    description:
+      "A changing selection of French pastries, cakes and tarts from the counter.",
+    image: "/assets/patisserie.jpg",
+  },
+];
 
-
+export const Menu: React.FC = () => {
   return (
-    <section id="menu" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our Specialties
+    <section className="bg-muted/40 py-16 sm:py-20" id="menu">
+      <div className="mx-auto max-w-6xl px-4">
+        <header className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+            From the kitchen
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-primary sm:text-4xl">
+            A taste of Cafe St&nbsp;Pierre
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Handpicked favorites that keep our customers coming back
+          <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+            Our menu changes with the seasons, but here&apos;s a glimpse of the
+            French favourites you&apos;ll find on the counter and blackboard.
           </p>
-        </div>
+        </header>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {featuredDrinks.map((drink, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-card"
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {items.map((item) => (
+            <article
+              key={item.name}
+              className="flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm md:flex-row"
             >
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={drink.image} 
-                  alt={drink.name}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              <div className="md:w-40">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-40 w-full object-cover md:h-full"
                 />
-                <div className="absolute top-4 right-4 bg-matcha text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                  {drink.tag}
-                </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-3">{drink.name}</h3>
-                <p className="text-muted-foreground leading-relaxed">{drink.description}</p>
-              </CardContent>
-            </Card>
+              <div className="flex flex-1 flex-col justify-between p-4">
+                <div>
+                  <div className="mb-2 flex items-center justify-between gap-3">
+                    <h3 className="text-base font-semibold text-primary sm:text-lg">
+                      {item.name}
+                    </h3>
+                    <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground sm:text-sm">
+                    {item.description}
+                  </p>
+                </div>
+                <p className="mt-3 text-xs text-muted-foreground">
+                  * Menu items may vary slightly from day to day.
+                </p>
+              </div>
+            </article>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            Plus reasonably priced toasties, more specialty drinks, and fresh coffee daily!
-          </p>
         </div>
       </div>
     </section>
