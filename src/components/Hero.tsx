@@ -1,4 +1,6 @@
 import React from "react";
+import heroImg from "@/assets/cafe-st-pierre-hero.jpg";
+
 
 export const Hero: React.FC = () => {
   return (

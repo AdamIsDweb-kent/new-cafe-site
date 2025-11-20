@@ -1,4 +1,8 @@
 import React from "react";
+import croqueImg from "@/assets/croque-monsieur.jpg";
+import hotChocolateImg from "@/assets/hot-chocolate.jpg";
+import patisserieImg from "@/assets/patisserie.jpg";
+import quicheImg from "@/assets/quiche.jpg";
 
 const items = [
   {
