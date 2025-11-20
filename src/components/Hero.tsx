@@ -39,16 +39,20 @@ export const Hero: React.FC = () => {
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href="#menu"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm
+                        transition-transform duration-200 hover:scale-105 hover:bg-emerald-700"
             >
               Explore Our Menu
             </a>
+
             <a
               href="#visit"
-              className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2.5 text-sm font-medium text-white/90 backdrop-blur-sm transition hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-white/70 px-5 py-2.5 text-sm font-medium text-white/90
+                        backdrop-blur-sm transition-transform duration-200 hover:scale-105 hover:bg-white/10"
             >
               Find Us in Canterbury
             </a>
+
           </div>
         </div>
       </div>
