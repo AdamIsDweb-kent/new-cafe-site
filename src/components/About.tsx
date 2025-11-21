@@ -1,29 +1,4 @@
 import React from "react";
-import { HeartHandshake, Coffee, Sparkles } from "lucide-react";
-
-type Highlight = {
-  title: string;
-  text: string;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-};
-
-const highlights: Highlight[] = [
-  {
-    title: "Authentic flavour",
-    text: "Classic French pastries and savoury dishes prepared with time-honoured techniques.",
-    Icon: Coffee,
-  },
-  {
-    title: "Warm & welcoming",
-    text: "A relaxed space for breakfast, lunch or coffee – with room for friends, family and dogs.",
-    Icon: HeartHandshake,
-  },
-  {
-    title: "Crafted with care",
-    text: "High-quality ingredients and a small, dedicated team focused on memorable food and coffee.",
-    Icon: Sparkles,
-  },
-];
 
 export const About: React.FC = () => {
   return (
@@ -56,20 +31,33 @@ export const About: React.FC = () => {
 
         {/* RIGHT: stacked highlight cards */}
         <div className="space-y-4">
-          {highlights.map(({ title, text, Icon }) => (
+          {[
+            {
+              title: "Authentic flavour",
+              text: "Classic French pastries and savoury dishes prepared with time-honoured techniques.",
+            },
+            {
+              title: "Warm & welcoming",
+              text: "A relaxed space for breakfast, lunch or coffee – with room for friends, family and dogs.",
+            },
+            {
+              title: "Crafted with care",
+              text: "High-quality ingredients and a small, dedicated team focused on memorable food and coffee.",
+            },
+          ].map((item) => (
             <article
-              key={title}
+              key={item.title}
               className="flex gap-3 rounded-2xl bg-card p-4 shadow-sm"
             >
-              <div className="mt-1 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-matcha-light text-matcha">
-                <Icon className="h-4 w-4" />
+              <div className="mt-1 h-9 w-9 flex-shrink-0 rounded-full bg-matcha-light flex items-center justify-center text-sm font-semibold text-matcha">
+                •
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-primary sm:text-base">
-                  {title}
+                  {item.title}
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
-                  {text}
+                  {item.text}
                 </p>
               </div>
             </article>
@@ -79,3 +67,4 @@ export const About: React.FC = () => {
     </section>
   );
 };
+
