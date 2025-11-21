@@ -63,7 +63,7 @@ export const Menu: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="h-40 w-full object-cover transition-transform duration-200 group-hover:scale-105 md:h-full"
+                  className="h-40 w-full object-cover md:h-full"
                 />
               </div>
               <div className="flex flex-1 flex-col justify-between p-4">
