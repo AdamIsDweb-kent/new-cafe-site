@@ -6,10 +6,10 @@ import quicheImg from "@/assets/quiche.jpg";
 
 const items = [
   {
-    name: "Café Crème & Croissant",
-    tag: "Breakfast favourite",
+    name: "Hot Chocolate",
+    tag: "Cold Mornings",
     description:
-      "Buttery croissant served warm with a classic French café crème.",
+      "Creamy Hot Chocolate for those cold mornings, topped with whipped cream.",
     image: hotChocolateImg, // or a croissant photo if you take one later
   },
   {
@@ -35,7 +35,6 @@ const items = [
   },
 ];
 
-
 export const Menu: React.FC = () => {
   return (
     <section className="bg-muted/40 py-16 sm:py-20" id="menu">
@@ -57,13 +56,14 @@ export const Menu: React.FC = () => {
           {items.map((item) => (
             <article
               key={item.name}
-              className="flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm md:flex-row"
+              className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm
+                         transition-transform duration-200 hover:scale-[1.02] hover:shadow-lg md:flex-row"
             >
               <div className="md:w-40">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="h-40 w-full object-cover md:h-full"
+                  className="h-40 w-full object-cover transition-transform duration-200 group-hover:scale-105 md:h-full"
                 />
               </div>
               <div className="flex flex-1 flex-col justify-between p-4">
